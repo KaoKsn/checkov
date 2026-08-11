@@ -391,7 +391,7 @@ class RunnerRegistry:
     ) -> Literal[0, 1]:
         output_formats: "dict[str, str]" = {}
 
-        if config.output_file_path and "," in config.output_file_path:
+        if config.output_file_path:
             output_paths = config.output_file_path.split(",")
             for idx, output_format in enumerate(config.output):
                 output_formats[output_format] = output_paths[idx]
